@@ -1,0 +1,15 @@
+.header {
+  min-height: 40px;
+  border: 1px solid #ffffff;
+  background-color: cadetblue;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.tablerow {
+  border-bottom: 1px solid #d7d7d7;
+}
