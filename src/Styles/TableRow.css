@@ -1,5 +1,6 @@
 .header {
   min-height: 40px;
+  min-width: 120px;
   border: 1px solid #ffffff;
   background-color: cadetblue;
   color: #ffffff;
@@ -12,4 +13,6 @@
 
 .tablerow {
   border-bottom: 1px solid #d7d7d7;
+  min-height: 40px;
+  min-width: 120px;
 }

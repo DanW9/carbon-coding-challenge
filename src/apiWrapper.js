@@ -14,12 +14,15 @@ const apiWrapper = () => {
 
   const getPagedResults = (_limit, _page) => fetch(requestBuilder({_limit, _page})).then(response => response.json())
 
+  const getSortedResults = (_sort, _order, _limit, _page) => fetch(requestBuilder({_sort, _order, _limit, _page})).then(response => response.json())
+
   // TODO: methods for filtered, sorted, paginated, etc.
 
   return {
     // Callable methods
     getAllResults,
     getPagedResults,
+    getSortedResults
   }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import TableRow from './TableRow'
+import TableFooter from './TableFooter'
 
 const headers = [
   {id: 'date', name: "Created"},
@@ -11,18 +12,14 @@ const headers = [
   {id: 'status', name: "Status"}]
 
 const TableView = props => {
-  const handleClick = id => {
-    console.log(id)
-  }
-
   return (
-    <div className='container mt-3'>
-      <div className="row">
-        <TableRow header={true} data={headers} key='header' handleClick={handleClick}/>
+    <div className='mt-3 mx-auto'>
+      <div className="row flex-nowrap">
+        <TableRow header={true} data={headers} key='header' handleClick={id => props.handleClick(id)}/>
       </div>
       {/* Getting a key warning here, unsure why */}
       { props.data.map(i => <TableRow key={i.id} data={i} />) }
-      {/* Footer component */}
+      <TableFooter />
     </div>
   )
 }

@@ -7,8 +7,10 @@ export const setCustomStyle = id => {
     case 'due':
     case 'total':
       return 'col justify-content-end'
+    case 'customer':
+      return 'col-5'
     default:
-      return 'col'
+      return 'col-1'
   }
 }
 
@@ -34,12 +36,12 @@ const TableRow= props => {
 
     for (let i in data) {
       if (i !== 'id'){
-        cols.push(<div className={'tablerow d-flex align-items-center '+setCustomStyle(i)} key={data[i]}>{formatData(i, data)}</div>)
+        cols.push(<div className={'tablerow d-flex align-items-center '+setCustomStyle(i)} key={data[i].id}>{formatData(i, data)}</div>)
       }
     }
 
     return (
-      <div className='row'>
+      <div className='row flex-nowrap'>
         { cols }
       </div>
     )
